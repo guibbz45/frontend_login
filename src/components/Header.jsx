@@ -52,7 +52,7 @@ const Header = () => {
                     <NavDropdown
                         title={user ? user.username : 'Dropdown'}
                         id="basic-nav-dropdown"
-                        align="end"
+                        align="start"
                     >
                         <NavDropdown.Item href="#profile">Profile</NavDropdown.Item>
                         <NavDropdown.Item href="#settings">Settings</NavDropdown.Item>
