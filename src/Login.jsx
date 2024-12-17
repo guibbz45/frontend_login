@@ -37,7 +37,7 @@ function Login() {
     <>
       <Navbar bg="dark" data-bs-theme="dark" expand="lg">
         <Container>
-          <Navbar.Brand href="/login">AuthenTech, Inc.</Navbar.Brand>
+          <Navbar.Brand href="/">AuthenTech, Inc.</Navbar.Brand>
         </Container>
       </Navbar>
       <Container className='mt-5'>
