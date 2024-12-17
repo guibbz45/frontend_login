@@ -104,14 +104,14 @@ const User = () => {
 		<Container>
 			<Row className="my-2">
 				<Col xs={12}>
-					<Button 
+{/* 					<Button 
 						variant="success" 
 						onClick={() => {
 							setMode('add');
 							handleShow();
 						}}>
 					Add New User
-					</Button>
+					</Button> */}
 				</Col>
 			</Row>
 			<Row>
@@ -149,6 +149,15 @@ const User = () => {
 												>
 													Delete
 											</Button>
+											<Button 
+						variant="success" 
+						onClick={() => {
+							setMode('add');
+							handleShow();
+						}}>
+					Create user
+					</Button>
+											
 										</td>
 									</tr>
 								}) 
