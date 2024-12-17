@@ -38,32 +38,36 @@ const Header = () => {
     };
 
   return (
-    <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-            <Navbar.Brand href="/">AUTHENTECH</Navbar.Brand>
-            <Nav className="me-auto">
-                <NavLink className ="nav-link"to="/users">Users</NavLink>
-                <Nav.Link href="#departments">Departments</Nav.Link>
-                <Nav.Link href="#courses">Courses</Nav.Link>
-            </Nav>
+   <Navbar bg="dark" expand="lg" variant="dark" fixed="top">
+            <Container>
+                <Navbar.Brand href="/">AUTHENTECH</Navbar.Brand>
+                {/* Toggle button for mobile view */}
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <NavLink className="nav-link" to="/users">
+                            Users
+                        </NavLink>
+                        <Nav.Link href="#departments">Departments</Nav.Link>
+                        <Nav.Link href="#courses">Courses</Nav.Link>
+                    </Nav>
 
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="ms-auto">
-                    <NavDropdown
-                        title={user ? user.username : 'Dropdown'}
-                        id="basic-nav-dropdown"
-                        align="start"
-                    >
-                        <NavDropdown.Item href="#profile">Profile</NavDropdown.Item>
-                        <NavDropdown.Item href="#settings">Settings</NavDropdown.Item>
-                        <NavDropdown.Item href="#" onClick={handleLogout}>
-                            Logout
-                        </NavDropdown.Item>
-                    </NavDropdown>
-                </Nav>
-            </Navbar.Collapse>
-        </Container>
-    </Navbar>
+                    <Nav className="ms-auto">
+                        <NavDropdown
+                            title={user ? user.username : 'Dropdown'}
+                            id="basic-nav-dropdown"
+                            align="end"
+                        >
+                            <NavDropdown.Item href="#profile">Profile</NavDropdown.Item>
+                            <NavDropdown.Item href="#settings">Settings</NavDropdown.Item>
+                            <NavDropdown.Item href="#" onClick={handleLogout}>
+                                Logout
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
   );
 };
 
